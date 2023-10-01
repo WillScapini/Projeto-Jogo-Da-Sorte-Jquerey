@@ -1,0 +1,51 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+    width: 370px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding-top: 50px;
+    font-size: 60px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+
+footer > button {
+   height: 30px;
+   width: 100px;
+   border-radius: 5px;
+   background-color: blueviolet;
+   border: none;
+   color: white;
+   cursor: pointer;
+   transition: 1s;
+
+
+}
+
+button:hover {
+    color: orangered;
+    
+}

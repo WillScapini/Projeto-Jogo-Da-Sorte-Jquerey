@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jogoSorte.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section>
+
+        <div>
+            <p id="one"></p>
+        </div>
+
+        <div>
+            <p id="two"></p>
+        </div>
+
+        <div>
+            <p id="tree"></p>
+        </div>
+    </section>
+
+    <footer>
+
+        <button id="start">INICIO</button>
+        <button id="clear">LIMPAR</button>
+
+    </footer>
+
+   
+    <script>
+
+        let emojis = ['&#128514;', '&#128516;', '&#128515;', '&#128512;', '&#128522;', '&#128521;', '&#128536;', '&#128538;', '&#128535;', '&#128563;', '	&#128513;', '	&#128547;', '&#128561;']
+
+        $('#start').click(() => {
+
+            let prizeDawOne = Math.floor(Math.random() * emojis.length)
+            let prizeDawTwo = Math.floor(Math.random() * emojis.length)
+            let prizeDawTree = Math.floor(Math.random() * emojis.length)
+
+            setTimeout(() => {
+                $('#one').html(emojis[prizeDawOne])
+                console.log(prizeDawOne)
+            }, 1000)
+
+            setTimeout(() => {
+                $('#two').html(emojis[prizeDawTwo]);
+                console.log(prizeDawTwo)
+            }, 5000)
+
+            setTimeout(() => {
+                $('#tree').html(emojis[prizeDawTree]);
+                console.log(prizeDawTree)
+            }, 10000)
+
+        })
+
+        $('#clear').click(() => {
+
+            $('#one').html(' ')
+            $('#two').html(' ')
+            $('#tree').html(' ')
+
+            prizeDawOne = ''
+            prizeDawTwo = ''
+            prizeDawTree = ''
+
+        })
+     
+    </script>
+
+</body>
+
+</html>
